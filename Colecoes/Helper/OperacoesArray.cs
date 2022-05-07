@@ -37,5 +37,10 @@ namespace Colecoes.Helper
             //    Console.WriteLine(array[i]);
             //}
         }
+
+        public void Ordenar(ref int[] array)
+        {
+            Array.Sort(array);
+        }
     }
 }
