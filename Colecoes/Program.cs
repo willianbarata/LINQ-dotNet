@@ -6,15 +6,23 @@ using Colecoes.Helper;
 OperacoesArray op = new OperacoesArray();
 
 int[] array = new int[5] {6, 3 ,8 ,1, 9};
-
+int[] arrayCopia = new int[10];
 
 Console.WriteLine("Array Sem ordenação");
 op.ImprimirArray(array);
 
 Console.WriteLine("Array ordenado");
 //op.OrdenarBubbleSort(ref array);
-op.Ordenar(ref array);
+//op.Ordenar(ref array);
+
+
 op.ImprimirArray(array);
+
+Console.WriteLine("Array antes da cópia");
+op.ImprimirArray(arrayCopia);
+
+op.Copiar(ref array, ref arrayCopia);
+op.ImprimirArray(arrayCopia);
 
 //int[] arrayInteiros = new int[3];
 
