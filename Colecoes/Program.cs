@@ -8,18 +8,29 @@ OperacoesArray op = new OperacoesArray();
 int[] array = new int[5] {6, 3 ,8 ,1, 9};
 int[] arrayCopia = new int[10];
 
-int valorProcurado = 1;
+int valorProcurado = 91;
 
-bool todosMaiorQue = op.TodosMaiorQue(array, valorProcurado);
+int valorAchado = op.ObterValor(array, valorProcurado);
 
-if (todosMaiorQue)
+if (valorAchado > 0)
 {
-    Console.WriteLine("Todos os valores são maior que {0}", valorProcurado);
+    Console.WriteLine("Encontrei o valor {0}", valorProcurado);
 }
 else
 {
-    Console.WriteLine("Existe valores que não são maiores do que {0}",valorProcurado);
+    Console.WriteLine("Não encontrei o valor {0}", valorProcurado);
 }
+
+//bool todosMaiorQue = op.TodosMaiorQue(array, valorProcurado);
+
+//if (todosMaiorQue)
+//{
+//    Console.WriteLine("Todos os valores são maior que {0}", valorProcurado);
+//}
+//else
+//{
+//    Console.WriteLine("Existe valores que não são maiores do que {0}",valorProcurado);
+//}
 
 //bool existe = op.Existe(array, valorProcurado);
 
