@@ -8,6 +8,8 @@ OperacoesArray op = new OperacoesArray();
 int[] array = new int[5] {6, 3 ,8 ,1, 9};
 int[] arrayCopia = new int[10];
 
+string[] arrayString = op.ConverterParaArrayString(array);
+
 int valorProcurado = 8;
 
 Console.WriteLine($"Capacidade atual do array {array.Length}");
