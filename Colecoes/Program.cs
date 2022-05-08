@@ -10,16 +10,21 @@ int[] arrayCopia = new int[10];
 
 int valorProcurado = 8;
 
-int indice = op.ObterIndice(array, valorProcurado); 
+Console.WriteLine($"Capacidade atual do array {array.Length}");
 
-if(indice > -1)
-{
-    Console.WriteLine("O indice do elemento {0} é: {1}", valorProcurado, indice);
-}
-else
-{
-    Console.WriteLine("Valor não existente no array");
-}
+op.RedimensionarArray(ref array, 8);
+
+Console.WriteLine($"Capacidade do array após redimensionar {array.Length}");
+//int indice = op.ObterIndice(array, valorProcurado); 
+
+//if(indice > -1)
+//{
+//    Console.WriteLine("O indice do elemento {0} é: {1}", valorProcurado, indice);
+//}
+//else
+//{
+//    Console.WriteLine("Valor não existente no array");
+//}
 
 //int valorAchado = op.ObterValor(array, valorProcurado);
 
