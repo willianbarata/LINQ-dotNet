@@ -8,18 +8,29 @@ OperacoesArray op = new OperacoesArray();
 int[] array = new int[5] {6, 3 ,8 ,1, 9};
 int[] arrayCopia = new int[10];
 
-int valorProcurado = 91;
+int valorProcurado = 8;
 
-int valorAchado = op.ObterValor(array, valorProcurado);
+int indice = op.ObterIndice(array, valorProcurado); 
 
-if (valorAchado > 0)
+if(indice > -1)
 {
-    Console.WriteLine("Encontrei o valor {0}", valorProcurado);
+    Console.WriteLine("O indice do elemento {0} é: {1}", valorProcurado, indice);
 }
 else
 {
-    Console.WriteLine("Não encontrei o valor {0}", valorProcurado);
+    Console.WriteLine("Valor não existente no array");
 }
+
+//int valorAchado = op.ObterValor(array, valorProcurado);
+
+//if (valorAchado > 0)
+//{
+//    Console.WriteLine("Encontrei o valor {0}", valorProcurado);
+//}
+//else
+//{
+//    Console.WriteLine("Não encontrei o valor {0}", valorProcurado);
+//}
 
 //bool todosMaiorQue = op.TodosMaiorQue(array, valorProcurado);
 
