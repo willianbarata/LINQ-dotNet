@@ -1,24 +1,40 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-using Colecoes.Helper;
 
-List<string> estados = new List<string> { "SP" , "MG" , "AM"};
-string[] estadosArray = new string[2] { "SC", "MT" };
-OperacoesList opLista = new OperacoesList();
+Queue<string> fila = new Queue<string>();
+
+fila.Enqueue("Willian");
+fila.Enqueue("Fernando");
+fila.Enqueue("Barata");
+
+Console.WriteLine($"Pessoas na fila {fila.Count}");
+
+while(fila.Count > 0)
+{
+    Console.WriteLine($"Vez de: {fila.Peek()}");
+    Console.WriteLine($"{fila.Dequeue()} atendido");
+}
+
+Console.WriteLine($"Pessoas na fila {fila.Count}");
+//using Colecoes.Helper;
+
+//List<string> estados = new List<string> { "SP" , "MG" , "AM"};
+//string[] estadosArray = new string[2] { "SC", "MT" };
+//OperacoesList opLista = new OperacoesList();
 
 
 
-Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
+//Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
-opLista.ImprimirListaString(estados);
+//opLista.ImprimirListaString(estados);
 
 //estados.Remove("MG");
 
 //estados.AddRange(estadosArray); 
 
-estados.Insert(1, "RJ");
+//estados.Insert(1, "RJ");
 
-opLista.ImprimirListaString(estados);
+//opLista.ImprimirListaString(estados);
 
 
 //double pi, raio, volume;
