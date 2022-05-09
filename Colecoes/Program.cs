@@ -1,22 +1,58 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+List<string> estados = new List<string>();
 
-using Colecoes.Helper;
+estados.Add("SP");
+estados.Add("MG");
+estados.Add("AM");
 
-OperacoesArray op = new OperacoesArray();
+Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
-int[] array = new int[5] {6, 3 ,8 ,1, 9};
-int[] arrayCopia = new int[10];
+foreach (var item in estados)
+{
+    Console.WriteLine(item);
+}
 
-string[] arrayString = op.ConverterParaArrayString(array);
+for(int i = 0; i < estados.Count; i++)
+{
+    Console.WriteLine($"Indice : {i}, Valor: {estados[i]}");
+}
 
-int valorProcurado = 8;
+//double pi, raio, volume;
+//pi = 3.14159;
+////TODO: Complete os espaços em branco com uma possível solução para o desafio     
+//raio = double.Parse(Console.ReadLine());
 
-Console.WriteLine($"Capacidade atual do array {array.Length}");
+//volume = pi * (4 / 3.0) * Math.Pow(raio, 3);
+//volume = Math.Round(volume, 3);
 
-op.RedimensionarArray(ref array, 8);
+//Console.WriteLine($"VOLUME = {volume}");
 
-Console.WriteLine($"Capacidade do array após redimensionar {array.Length}");
+//double A, B, C, MEDIA;
+//A = double.Parse(Console.ReadLine());
+//B = double.Parse(Console.ReadLine());
+//C = double.Parse(Console.ReadLine());
+
+//MEDIA = (((A * 2) + (B * 3) + (C * 5)) / 10);
+
+//Console.WriteLine("MEDIA = {0}", MEDIA.ToString("N1"));
+
+//using Colecoes.Helper;
+
+//OperacoesArray op = new OperacoesArray();
+
+//int[] array = new int[5] {6, 3 ,8 ,1, 9};
+//int[] arrayCopia = new int[10];
+
+//string[] arrayString = op.ConverterParaArrayString(array);
+
+//int valorProcurado = 8;
+
+//Console.WriteLine($"Capacidade atual do array {array.Length}");
+
+//op.RedimensionarArray(ref array, 8);
+
+//Console.WriteLine($"Capacidade do array após redimensionar {array.Length}");
 //int indice = op.ObterIndice(array, valorProcurado); 
 
 //if(indice > -1)
