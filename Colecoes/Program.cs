@@ -9,8 +9,10 @@ estados.Add("AM", "Amazonas");
 foreach (  KeyValuePair<string, string> item in estados)
 {
     Console.WriteLine($"Chave: {item.Key} , Valor: {item.Value}");
-}  
+}
+string valorProcurado = "MG";
 
+Console.WriteLine(estados[valorProcurado]);
 
 //Stack<string> pilhaLivros = new Stack<string>();
 
