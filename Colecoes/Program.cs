@@ -1,25 +1,35 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
-Dictionary<string, string> estados = new Dictionary<string, string>();
+//LINQ
+int[] numbers = { 5, 10, 8, 3, 6, 12 };
 
-estados.Add("SP", "São Paulo");
-estados.Add("MG", "Minas Gerais");
-estados.Add("AM", "Amazonas");
+IEnumerable<int> numQuery =
+    from num in numbers
+    where num % 2 == 0
+    orderby num
+    select num;
 
-foreach (  KeyValuePair<string, string> item in estados)
-{
-    Console.WriteLine($"Chave: {item.Key} , Valor: {item.Value}");
-}
-string valorProcurado = "SC";
+IEnumerable<int> numbers2 = numbers.Where(num => num % 2 == 0);
+//Dictionary<string, string> estados = new Dictionary<string, string>();
 
-if(estados.TryGetValue(valorProcurado, out string estadoEncontrado))
-{
-    Console.WriteLine(estadoEncontrado);
-}
-else
-{
-    Console.WriteLine($"Chave {valorProcurado} não existe no dicionário");
-}
+//estados.Add("SP", "São Paulo");
+//estados.Add("MG", "Minas Gerais");
+//estados.Add("AM", "Amazonas");
+
+//foreach (  KeyValuePair<string, string> item in estados)
+//{
+//    Console.WriteLine($"Chave: {item.Key} , Valor: {item.Value}");
+//}
+//string valorProcurado = "SC";
+
+//if(estados.TryGetValue(valorProcurado, out string estadoEncontrado))
+//{
+//    Console.WriteLine(estadoEncontrado);
+//}
+//else
+//{
+//    Console.WriteLine($"Chave {valorProcurado} não existe no dicionário");
+//}
 
 //Console.WriteLine($"Removendo o valor: {valorProcurado}");
 //estados.Remove(valorProcurado); 
