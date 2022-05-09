@@ -3,13 +3,16 @@
 //LINQ
 int[] numbers = { 5, 10, 8, 3, 6, 12 };
 
-IEnumerable<int> numQuery =
+IEnumerable<int> numerosParesQuery =
     from num in numbers
     where num % 2 == 0
     orderby num
     select num;
 
-IEnumerable<int> numbers2 = numbers.Where(num => num % 2 == 0);
+IEnumerable<int> numerosParesMetodo = numbers.Where(num => num % 2 == 0).OrderBy(x => x).ToList();
+
+Console.WriteLine("Números pares query: " + string.Join(", ", numerosParesQuery));
+Console.WriteLine("Números pares métodos: " + string.Join(", ", numerosParesMetodo));
 //Dictionary<string, string> estados = new Dictionary<string, string>();
 
 //estados.Add("SP", "São Paulo");
