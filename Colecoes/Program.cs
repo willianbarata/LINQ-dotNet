@@ -1,8 +1,15 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //LINQ
-int[] numbers = { 5, 10, 8, 3, 6, 12 };
+int[] numbers = new int[7] { 100, 5, 10, 0, 3, 6, 12 };
 
+var minimo = numbers.Min();
+var maximo = numbers.Max();
+var medio = numbers.Average();
+
+Console.WriteLine($"Mínino: {minimo}");
+Console.WriteLine($"Máximo: {maximo}");
+Console.WriteLine($"Médio: {medio}");
 IEnumerable<int> numerosParesQuery =
     from num in numbers
     where num % 2 == 0
