@@ -1,6 +1,9 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+using Colecoes.Helper;
+
 List<string> estados = new List<string>();
+OperacoesList opLista = new OperacoesList();
 
 estados.Add("SP");
 estados.Add("MG");
@@ -8,15 +11,12 @@ estados.Add("AM");
 
 Console.WriteLine($"Quantidade de elementos na lista: {estados.Count}");
 
-foreach (var item in estados)
-{
-    Console.WriteLine(item);
-}
+opLista.ImprimirListaString(estados);
 
-for(int i = 0; i < estados.Count; i++)
-{
-    Console.WriteLine($"Indice : {i}, Valor: {estados[i]}");
-}
+estados.Remove("MG");
+
+opLista.ImprimirListaString(estados);
+
 
 //double pi, raio, volume;
 //pi = 3.14159;
