@@ -1,15 +1,20 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 //LINQ
-int[] numbers = new int[7] { 100, 5, 10, 0, 3, 6, 12 };
+int[] numbers = new int[10] { 100, 5, 10, 0, 3, 6, 12, 19, 5, 100  };
 
 var minimo = numbers.Min();
 var maximo = numbers.Max();
 var medio = numbers.Average();
+var soma = numbers.Sum();
+var arrayUnico = numbers.Distinct().ToArray();
 
 Console.WriteLine($"Mínino: {minimo}");
 Console.WriteLine($"Máximo: {maximo}");
 Console.WriteLine($"Médio: {medio}");
+Console.WriteLine($"Soma: {soma}");
+Console.WriteLine($"Array original: {string.Join(", ", numbers)}");
+Console.WriteLine($"Array distinct: {string.Join(", ", arrayUnico)}");
 IEnumerable<int> numerosParesQuery =
     from num in numbers
     where num % 2 == 0
