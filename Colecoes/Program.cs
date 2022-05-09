@@ -14,7 +14,9 @@ opLista.ImprimirListaString(estados);
 
 //estados.Remove("MG");
 
-estados.AddRange(estadosArray); 
+//estados.AddRange(estadosArray); 
+
+estados.Insert(1, "RJ");
 
 opLista.ImprimirListaString(estados);
 
