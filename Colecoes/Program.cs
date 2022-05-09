@@ -1,21 +1,35 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
+Stack<string> pilhaLivros = new Stack<string>();
 
-Queue<string> fila = new Queue<string>();
+pilhaLivros.Push(".NET");
+pilhaLivros.Push("DDD");
+pilhaLivros.Push("Código Limpo");
 
-fila.Enqueue("Willian");
-fila.Enqueue("Fernando");
-fila.Enqueue("Barata");
+Console.WriteLine($"Livros para leitura: {pilhaLivros.Count}");
 
-Console.WriteLine($"Pessoas na fila {fila.Count}");
-
-while(fila.Count > 0)
+while(pilhaLivros.Count > 0)
 {
-    Console.WriteLine($"Vez de: {fila.Peek()}");
-    Console.WriteLine($"{fila.Dequeue()} atendido");
+    Console.WriteLine($"Próximo livro para a leitura: {pilhaLivros.Peek()}");
+    Console.WriteLine($"{pilhaLivros.Pop()} lido com sucesso");
 }
 
-Console.WriteLine($"Pessoas na fila {fila.Count}");
+Console.WriteLine($"Livros para leitura: {pilhaLivros.Count}");
+//Queue<string> fila = new Queue<string>();
+
+//fila.Enqueue("Willian");
+//fila.Enqueue("Fernando");
+//fila.Enqueue("Barata");
+
+//Console.WriteLine($"Pessoas na fila {fila.Count}");
+
+//while(fila.Count > 0)
+//{
+//    Console.WriteLine($"Vez de: {fila.Peek()}");
+//    Console.WriteLine($"{fila.Dequeue()} atendido");
+//}
+
+//Console.WriteLine($"Pessoas na fila {fila.Count}");
 //using Colecoes.Helper;
 
 //List<string> estados = new List<string> { "SP" , "MG" , "AM"};
