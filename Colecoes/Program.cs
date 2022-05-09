@@ -10,16 +10,25 @@ foreach (  KeyValuePair<string, string> item in estados)
 {
     Console.WriteLine($"Chave: {item.Key} , Valor: {item.Value}");
 }
-string valorProcurado = "MG";
+string valorProcurado = "SC";
 
-Console.WriteLine($"Removendo o valor: {valorProcurado}");
-estados.Remove(valorProcurado); 
-
-
-foreach (KeyValuePair<string, string> item in estados)
+if(estados.TryGetValue(valorProcurado, out string estadoEncontrado))
 {
-    Console.WriteLine($"Chave: {item.Key} , Valor: {item.Value}");
+    Console.WriteLine(estadoEncontrado);
 }
+else
+{
+    Console.WriteLine($"Chave {valorProcurado} não existe no dicionário");
+}
+
+//Console.WriteLine($"Removendo o valor: {valorProcurado}");
+//estados.Remove(valorProcurado); 
+
+
+//foreach (KeyValuePair<string, string> item in estados)
+//{
+//    Console.WriteLine($"Chave: {item.Key} , Valor: {item.Value}");
+//}
 
 //Console.WriteLine("Valor original");
 //Console.WriteLine(estados[valorProcurado]);
