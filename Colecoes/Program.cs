@@ -12,13 +12,22 @@ foreach (  KeyValuePair<string, string> item in estados)
 }
 string valorProcurado = "MG";
 
-Console.WriteLine("Valor original");
-Console.WriteLine(estados[valorProcurado]);
+Console.WriteLine($"Removendo o valor: {valorProcurado}");
+estados.Remove(valorProcurado); 
 
-estados[valorProcurado] = "MG - Teste atualização";
 
-Console.WriteLine("Valor atualizado");
-Console.WriteLine(estados[valorProcurado]);
+foreach (KeyValuePair<string, string> item in estados)
+{
+    Console.WriteLine($"Chave: {item.Key} , Valor: {item.Value}");
+}
+
+//Console.WriteLine("Valor original");
+//Console.WriteLine(estados[valorProcurado]);
+
+//estados[valorProcurado] = "MG - Teste atualização";
+
+//Console.WriteLine("Valor atualizado");
+//Console.WriteLine(estados[valorProcurado]);
 
 
 //Stack<string> pilhaLivros = new Stack<string>();
